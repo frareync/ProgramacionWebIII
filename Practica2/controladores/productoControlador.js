@@ -16,7 +16,7 @@ export const muestraProductos = async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 };
-
+//6
 export const insertarProducto = async (req, res) => {
 	try {
 		const resultado = await insertaProducto(req.body);

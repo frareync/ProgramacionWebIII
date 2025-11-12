@@ -5,7 +5,7 @@ import {
 	obtCategoriaConProductos,
 	obtCategorias,
 } from "../modelos/categoriaModelo.js";
-
+//2
 export const muestraCategorias = async(req, res) => {
   try {
     const resultado = await obtCategorias();
@@ -14,7 +14,7 @@ export const muestraCategorias = async(req, res) => {
     res.status(500).json({error: error.message});
   }
 };
-
+//1
 export const insertarCategorias = async(req, res) => {
   try {
     const resultado = await insertaCategoria(req.body);
@@ -23,7 +23,7 @@ export const insertarCategorias = async(req, res) => {
     res.status(500).json({error: error.message});
   }
 };
-
+//4
 export const actualizarCategorias = async(req, res) => {
   try {
     const resultado = await actualizaCategoria(req.params.id ,req.body);
@@ -32,7 +32,7 @@ export const actualizarCategorias = async(req, res) => {
     res.status(500).json({error: error.message});
   }
 };
-
+//5
 export const eliminarCategorias = async(req, res) => {
   try {
     await eliminaCategoria(req.params.id);

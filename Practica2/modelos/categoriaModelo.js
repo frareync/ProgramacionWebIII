@@ -1,5 +1,6 @@
 import { db } from '../config/db.js';
 
+// 2
 export const obtCategorias = async () => {
   const [resultado] = await db.query('SELECT * FROM categorias');
   return resultado;
@@ -10,6 +11,7 @@ export const obtCategoriaPorId = async (id) => {
   return resultado;
 };
 
+//1
 export const insertaCategoria = async (categoria) => {
   const { nombre, descripcion } = categoria;
   const [resultado] = await db.query(
@@ -31,7 +33,7 @@ export const actualizaCategoria = async (id, categoria) => {
   // return { id, nombre, descripcion };
   return { id, ...categoria };
 };
-
+// 5
 export const eliminaCategoria = async (id) => {
   await db.query('DELETE FROM categorias WHERE id = ?', [id]);
   return id;

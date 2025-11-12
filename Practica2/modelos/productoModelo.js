@@ -9,7 +9,7 @@ export const obtProductoPorId = async (id) => {
   const [resultado] = await db.query('SELECT * FROM productos WHERE id = ?', [id]);
   return resultado;
 }
-
+//6
 export const insertaProducto = async (producto) => {
   const { nombre, precio, stock, categoria_id } = producto;
   const [resultado] = await db.query(
@@ -19,7 +19,7 @@ export const insertaProducto = async (producto) => {
   // return { id: result.insertId, nombre, precio, stock, categoria_id };
   return { id: resultado.insertId, ...producto };
 };
-
+//9
 export const actualizaProducto = async (id, producto) => {
   const { nombre, precio, stock, categoria_id } = producto;
   await db.query(
